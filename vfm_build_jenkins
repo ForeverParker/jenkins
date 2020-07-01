@@ -7,11 +7,15 @@ pipeline {
    }
 
    stages {
+      stage('Execute Pre Commands'){
+         script{
+               String commandList = ${BuildTarget};
+               echo commandList;
+            }
+      }
       stage('npm install packages') {
          steps {
-            sh "${PreCommand}"
             sh 'nvm use 10'
-            sh 'npm i'
          }
       }
    }
