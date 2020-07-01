@@ -12,7 +12,7 @@ pipeline {
              script{
                String commandList = "${PreCommand}";
                if(commandList!=null){
-                   for(String cCommand:commandList.splite("\n"))
+                   for(String cCommand:commandList.split("\n"))
                     sh cCommand;
                }
             }
