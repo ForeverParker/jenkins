@@ -11,7 +11,10 @@ pipeline {
          steps{
              script{
                String commandList = "${PreCommand}";
-               sh commandList;
+               if(commandList!=null){
+                   for(String cCommand:commandList.splite("\n"))
+                    sh cCommand;
+               }
             }
          }
       }
