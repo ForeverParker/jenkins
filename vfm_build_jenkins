@@ -11,7 +11,7 @@ pipeline {
          steps{
              script{
                String commandList = "${PreCommand}";
-               echo commandList;
+               sh commandList;
             }
          }
       }
