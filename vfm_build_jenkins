@@ -8,10 +8,12 @@ pipeline {
 
    stages {
       stage('Execute Pre Commands'){
-         script{
+         steps{
+             script{
                String commandList = ${BuildTarget};
                echo commandList;
             }
+         }
       }
       stage('npm install packages') {
          steps {
