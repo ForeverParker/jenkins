@@ -10,7 +10,7 @@ pipeline {
       stage('Execute Pre Commands'){
          steps{
              script{
-               String commandList = "${BuildTarget}";
+               String commandList = "${PreCommand}";
                echo commandList;
             }
          }
